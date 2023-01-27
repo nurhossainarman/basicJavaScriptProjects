@@ -1,0 +1,119 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --light: #EEE;
+  --pink: #EC4899;
+  --purple: #8B5Cf6;
+  --a: #e0d287;
+  --b: #d4ab54;
+  --c: #c18b45;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.navhead h1{
+
+  font-size: 1.75rem;
+  font-weight: 700;
+  background-image: linear-gradient(to left, var(--c), var(--a), var(--b));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+nav {
+    display: flex;
+    background-color: #222;
+    box-shadow: black;
+    align-items: center;
+    
+    max-width: 100%;
+  }
+.navhead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  ul{
+    display: flex;
+    list-style-type: none;
+  }
+.nav-center {
+  margin-left: 55%;
+}
+  .links {
+    display: block;
+    margin: auto;
+  }
+  a {
+    margin-left: 1rem;
+    font-size: large;
+    color: lightgrey;
+    letter-spacing: 0.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+   }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ .container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #303030;
+ }
+
+ .swiper{
+  max-width: 60%;
+  height: fit-content;
+ }
+.container .text h1{
+  font-size: 3rem;
+  font-weight: 1000;
+  background-image: linear-gradient(to left, var(--c), var(--a), var(--b));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  
+}
+
+.container .text button{
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  background-color: white;
+  background: none;
+  border-color: var(--b);
+  cursor: pointer;
+  color: white;
+}
+
+.container .text button:hover{
+  opacity: 0.8;
+}
+
+.container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: lightgray;
+  margin-left: 1.125rem;
+  font-size: 1.125rem;
+}
+ 
+
+.swiper-slide img{
+  width: 100%;
+}
