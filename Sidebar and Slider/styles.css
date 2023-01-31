@@ -1,0 +1,28 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: white;
+}
+
+.sidebar {
+    background-color: grey;
+    width: 30%;
+    height: 100vh;
+    display: none;
+}
+
+.container {
+    display: flex;
+    position: relative;    
+}
+
+#closebtn{
+    position: absolute;
+    right: 0;    
+}
