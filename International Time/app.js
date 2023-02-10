@@ -1407,6 +1407,24 @@ cities.forEach(function(element){ //Adding cities in dropdownbox
   ul.appendChild(listItem);
 })
 
+document.querySelector(".d-flex").addEventListener("submit", function(e){
+    e.preventDefault();
+    var input = document.getElementById("search").value.toLowerCase();
+    let elem =document.querySelectorAll(".dropdown-item")
+    for(var i=0; i < elem.length; i++)
+    {
+        if(input ==null || input==""){
+            break;
+        }
+        else if(elem[i].innerHTML.toLowerCase().includes(input)){
+            console.log(elem[i]);
+            document.getElementById("d-city").click();
+            elem[i].scrollIntoView({behavior: 'smooth'});
+        }
+    }   
+
+  })
+
 document.querySelectorAll(".dropdown-item").forEach(function(element){ //Add card on click
   element.addEventListener("click", function(){
     let title = document.createElement("h5");

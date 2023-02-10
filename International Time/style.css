@@ -3,7 +3,7 @@
     max-width: auto;
 }
 body{
-    height: 110vh;
+    height: 100vh;
 }
 header{
     margin-top: 70px;
@@ -18,8 +18,9 @@ header{
     margin-top: 1rem; 
     color: black;
 }
-/* nav {
-    position: absolute;
+/* .highlight {
+    background: rgb(195, 195, 195) !important;
+    font-weight: bold;
     
 } */
 
