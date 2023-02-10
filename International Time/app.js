@@ -1409,46 +1409,44 @@ cities.forEach(function(element){ //Adding cities in dropdownbox
 
 document.querySelectorAll(".dropdown-item").forEach(function(element){ //Add card on click
   element.addEventListener("click", function(){
-    // <h5 class="card-title" id="city"></h5>
-    //     <h6 class="card-subtitle mb-2 text-muted"></h6>
-    //     <p class="card-text" id="time"></p>
-    var count = 0;
     let title = document.createElement("h5");
     let subTitle = document.createElement("h6");
-    let para = document.createElement("p")
-    title.className = "card-title";
-    title.id = element.innerHTML;
-    // title.innerHTML = element.innerHTML;
-    subTitle.className = "card-subtitle mb-2 text-muted";
-    // subTitle.innerHTML = element.id.toString(); //TIMEZONE
-    para.id = element.dataset.value;
-    para.className = "card-text";
+    let para = document.createElement("p");
     let cardBody = document.createElement("div");
+    var card = document.createElement("div");
+    var header = document.getElementById("header-id");
+
+    title.className = "card-title";
+    title.id = element.innerHTML;//
+    subTitle.className = "card-subtitle mb-2 text-muted";
+    para.id = element.dataset.value;// TimeZOne
+    para.className = "card-text";
+    cardBody.className = "card-body";
+    card.className= "card";
+
+
     cardBody.appendChild(title);
     cardBody.appendChild(subTitle);
     cardBody.appendChild(para);
-    cardBody.className = "card-body";
-    var card = document.createElement("div");
-    card.className= "card";
     card.appendChild(cardBody);
-    var header = document.getElementById("header-id");
     header.appendChild(card);
+    //
     driver(element.dataset.value);
+    console.log(element.dataset.value);
     setInterval(() => {driver(element.dataset.value)}, 1000);
   })
 })
 
 function calcTime(timeZone) { //Calculating time using timeZone
   let date = new Date(new Date().toLocaleString("en-US", {timeZone: `${timeZone}`}));
-  return date.toLocaleTimeString();
+  return date.toLocaleString();
 }
 
-function driver (timeZone){ //Changing the innerHtml of .element#time
+function driver (timeZone){ // Asia/Dhaka
     let localeTime = calcTime(timeZone);
     let arr = timeZone.split("/");
     document.getElementById(`${arr[arr.length-1]}`).innerHTML =  arr[arr.length-1];
-    document.getElementById(timeZone).innerHTML =  localeTime;
-    console.log("FIRED");    
+    document.getElementById(timeZone).innerHTML =  localeTime;   
 }
 
 
