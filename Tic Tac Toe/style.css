@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: rgb(255, 249, 214);
+}
 .board { 
     display: flex;
     flex-wrap: wrap;
@@ -22,10 +25,18 @@
     font-size: 30px;
     text-align: center;
     justify-content: center;
-    color: black;
-    background-color: rgb(255, 109, 109);
+    color: rgb(255, 249, 214);
+    background-color: rgb(5, 195, 56);
     border-radius: 1rem;
     width: 300px;
     height: 50px;
     margin: 100px auto;
 }
+button{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
